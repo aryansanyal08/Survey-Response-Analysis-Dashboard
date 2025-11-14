@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Response Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Survey Response Analysis Dashboard</h1>
+            <p class="subtitle">Effect of Spiritual and Cultural Communication on Youths - Varanasi Study</p>
+        </header>
+
+        <!-- UPDATED CONTROLS SECTION -->
+        <div class="controls-section">
+
+            <div class="control-group">
+                <label for="questionSelect">Select Question:</label>
+                <select id="questionSelect">
+                    <option value="1">Question 1</option>
+                </select>
+            </div>
+
+            <!-- REMOVED AGE GROUP SELECT COMPLETELY -->
+
+            <div class="control-group">
+                <label for="viewType">View Type:</label>
+                <select id="viewType">
+                    <option value="bar">Bar Chart</option>
+                    <option value="line">Line Chart</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="stats-cards">
+            <div class="stat-card">
+                <div class="stat-label">Total Questions</div>
+                <div class="stat-value" id="totalQuestions">100</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Total Responses</div>
+                <div class="stat-value" id="totalResponses">400</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Age Groups</div>
+                <div class="stat-value">4</div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="responseChart"></canvas>
+            <button id="downloadChart" class="download-btn">Download Image</button>
+        
+        </div>
+
+        <div class="question-info">
+            <h3>Current Question Details</h3>
+            <div id="questionText"></div>
+        </div>
+
+        <div class="data-table-container">
+            <h3>Response Data</h3>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Age Group</th>
+                        <th>Option</th>
+                        <th>Response Count</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
