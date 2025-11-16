@@ -13,7 +13,7 @@
             <p class="subtitle">Effect of Spiritual and Cultural Communication on Youths - Varanasi Study</p>
         </header>
 
-        <!-- UPDATED CONTROLS SECTION -->
+        <!-- CONTROLS SECTION -->
         <div class="controls-section">
 
             <div class="control-group">
@@ -22,8 +22,6 @@
                     <option value="1">Question 1</option>
                 </select>
             </div>
-
-            <!-- REMOVED AGE GROUP SELECT COMPLETELY -->
 
             <div class="control-group">
                 <label for="viewType">View Type:</label>
@@ -52,8 +50,9 @@
 
         <div class="chart-container">
             <canvas id="responseChart"></canvas>
+
+            <!-- DOWNLOAD BUTTON -->
             <button id="downloadChart" class="download-btn">Download Image</button>
-        
         </div>
 
         <div class="question-info">
@@ -75,11 +74,15 @@
                 <tbody id="tableBody"></tbody>
             </table>
         </div>
-        
 
     </div>
 
+    <!-- CHART.JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    <!-- ⭐ NEW: DATALABELS PLUGIN (for showing percentages) ⭐ -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
     <script src="script.js"></script>
 </body>
 </html>
